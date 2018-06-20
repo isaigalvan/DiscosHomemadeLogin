@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -48,7 +49,16 @@ public class Nota extends AppCompatActivity {
         adaptador=new Adaptador();
         adaptador.context=this;
         list.setAdapter(adaptador);
+        list.setOnItemClickListener(
+                new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
+                        adaptador.arreglo.remove(i);
+                        adaptador.notifyDataSetChanged();
+                    }
+                }
+        );
 
 
     }
