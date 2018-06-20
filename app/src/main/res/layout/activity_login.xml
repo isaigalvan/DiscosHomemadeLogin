@@ -14,6 +14,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:hint="User"
+        android:text="1"
         android:textAlignment="center"
         android:textStyle="italic"
         tools:textColor="#ffffff" />
@@ -25,12 +26,13 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:hint="Password"
+        android:text="JM123"
         android:inputType="textPassword"
         android:textAlignment="center"
         android:textStyle="italic" />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/loginbtn"
         android:layout_width="150dp"
         android:layout_height="40dp"
         android:layout_gravity="center"
@@ -39,5 +41,6 @@
         android:text="Log in"
         android:textStyle="bold"
         tools:background="?android:attr/autofilledHighlight"
-        tools:textColor="@android:color/holo_blue_dark" />
+        tools:textColor="@android:color/holo_blue_dark"
+        android:onClick="submit"/>
 </LinearLayout>
